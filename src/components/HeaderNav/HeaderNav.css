@@ -1,0 +1,193 @@
+.header {
+  position: fixed;
+
+  top: 5%;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: clamp(320px, 42vw, 620px);
+  height: clamp(44px, 3.2vw, 48px);
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 clamp(16px, 1.7vw, 24px);
+
+  box-sizing: border-box;
+
+  border: 1px solid rgba(255, 255, 255, 0.22);
+
+  border-radius: 999px;
+
+  background: rgba(15, 13, 20, 0.65);
+
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+
+  z-index: 10;
+}
+
+
+/* Logo */
+
+.header__logo {
+  flex-shrink: 0;
+
+  color: #f5f5f8;
+
+  font-size: clamp(1rem, 1.4vw, 1.25rem);
+
+  font-weight: 300;
+}
+
+
+/* Área da navegação */
+
+.header__nav {
+  position: relative;
+
+  flex: 1;
+
+  height: 100%;
+
+  margin-left: clamp(16px, 2vw, 30px);
+
+  overflow: hidden;
+}
+
+
+/* Todos os links */
+
+.header__link {
+  position: absolute;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: rgba(190, 184, 200, 0.75);
+
+  font-family: inherit;
+
+  font-size: clamp(0.72rem, 1vw, 0.85rem);
+
+  font-weight: 400;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+
+  transition:
+    left 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+    color 0.45s ease,
+    font-size 0.45s ease,
+    transform 0.45s ease;
+}
+
+
+/* =========================
+   POSIÇÃO INICIAL
+========================= */
+
+.header__link--0 {
+  left: 56%;
+}
+
+.header__link--1 {
+  left: 70%;
+}
+
+.header__link--2 {
+  left: 84%;
+}
+
+
+/* =========================
+   SOBRE ATIVO
+========================= */
+
+.header:has(.header__link--0.header__link--active)
+.header__link--0 {
+  left: 40%;
+}
+
+.header:has(.header__link--0.header__link--active)
+.header__link--1 {
+  left: 70%;
+}
+
+.header:has(.header__link--0.header__link--active)
+.header__link--2 {
+  left: 84%;
+}
+
+
+/* =========================
+   PROJETOS ATIVO
+========================= */
+
+.header:has(.header__link--1.header__link--active)
+.header__link--0 {
+  left: 0%;
+}
+
+.header:has(.header__link--1.header__link--active)
+.header__link--1 {
+  left: 40%;
+}
+
+.header:has(.header__link--1.header__link--active)
+.header__link--2 {
+  left: 84%;
+}
+
+
+/* =========================
+   CURRÍCULO ATIVO
+========================= */
+
+.header:has(.header__link--2.header__link--active)
+.header__link--0 {
+  left: 0%;
+}
+
+.header:has(.header__link--2.header__link--active)
+.header__link--1 {
+  left: 10%;
+}
+
+.header:has(.header__link--2.header__link--active)
+.header__link--2 {
+  left: 40%;
+}
+
+
+/* =========================
+   HOVER
+========================= */
+
+.header__link:hover {
+  color: #d7c0ff;
+}
+
+
+/* =========================
+   ATIVO
+========================= */
+
+.header__link--active {
+  color: #ac79ff;
+
+  font-size: clamp(0.85rem, 1.15vw, 1rem);
+
+  font-weight: 500;
+
+  transform: translateY(-50%) scale(1.1);
+}
