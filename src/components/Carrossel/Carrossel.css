@@ -1,0 +1,49 @@
+.carrossel {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.carrossel__track {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    padding: 4px 4px 12px;
+    scrollbar-width: none;
+}
+
+.carrossel__track::-webkit-scrollbar {
+    display: none;
+}
+
+.carrossel__controles {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.carrossel__seta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.04);
+    color: #ffffff;
+    cursor: pointer;
+    transition: background 0.2s ease, opacity 0.2s ease;
+}
+
+.carrossel__seta:hover:not(:disabled) {
+    background: rgba(157, 124, 255, 0.2);
+}
+
+.carrossel__seta:disabled {
+    opacity: 0.3;
+    cursor: default;
+}
