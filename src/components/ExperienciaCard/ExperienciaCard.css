@@ -1,0 +1,105 @@
+.experiencia-linha {
+    position: relative;
+    display: flex;
+    width: 100%;
+    margin-bottom: 32px;
+}
+
+.experiencia-linha--esquerda {
+    justify-content: flex-start;
+}
+
+.experiencia-linha--direita {
+    justify-content: flex-end;
+}
+
+.experiencia-card {
+    width: calc(50% - 40px);
+    padding: 24px;
+    border-radius: 16px;
+    background: #14121f;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.experiencia-linha__bolinha {
+    position: absolute;
+    top: 28px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #9d7cff;
+    box-shadow: 0 0 0 4px rgba(157, 124, 255, 0.15);
+}
+
+.experiencia-card__topo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+}
+
+.experiencia-card__periodo {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: #a29cb3;
+}
+
+.experiencia-card__modalidade {
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #f4f2ff;
+    background: rgba(157, 124, 255, 0.18);
+    border: 1px solid rgba(157, 124, 255, 0.3);
+}
+
+.experiencia-card__cargo {
+    font-size: 17px;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0 0 4px;
+}
+
+.experiencia-card__empresa {
+    font-size: 13px;
+    color: #8a84a0;
+    margin: 0 0 16px;
+}
+
+.experiencia-card__bullets {
+    margin: 0;
+    padding-left: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.experiencia-card__bullets li {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #b8b3c9;
+}
+
+@media (max-width: 768px) {
+
+    .experiencia-linha--esquerda,
+    .experiencia-linha--direita {
+        justify-content: flex-start;
+        padding-left: 32px;
+    }
+
+    .experiencia-card {
+        width: 100%;
+    }
+
+    .experiencia-linha__bolinha {
+        left: 0;
+        transform: none;
+    }
+}

@@ -2,6 +2,7 @@ import HeaderNav from './components/HeaderNav/HeaderNav'
 import Home from './section/Home/Home'
 import Projetos from './section/Projetos/Projetos'
 import Sobre from './section/Sobre/Sobre'
+import Trajetoria from './section/Trajetoria/Trajetoria'
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Home />
       <Sobre />
       <Projetos />
+      <Trajetoria />
     </main>
   )
 }
