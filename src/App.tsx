@@ -1,4 +1,5 @@
 import HeaderNav from './components/HeaderNav/HeaderNav'
+import Contato from './section/Contato/Contato'
 import Home from './section/Home/Home'
 import Projetos from './section/Projetos/Projetos'
 import Sobre from './section/Sobre/Sobre'
@@ -12,6 +13,7 @@ function App() {
       <Sobre />
       <Projetos />
       <Trajetoria />
+      <Contato />
     </main>
   )
 }
