@@ -1,12 +1,14 @@
+import FloatingCircles from '../../components/FloatingCircles/FloatingCircles'
 import './Contato.css'
 
-const email = 'email@gmail.com'
+const email = 'Edbertosantos.dev@gmail.com'
 const anoAtual = new Date().getFullYear()
 
 function Contato() {
     return (
         <section className="contato">
-            <div className="contato__glow" />
+
+            <FloatingCircles />
 
             <div className="contato__content">
                 <h2 className="contato__title">
@@ -25,7 +27,7 @@ function Contato() {
                 <div className="contato__redes">
                     <a
                         className="contato__rede-icone"
-                        href="https://github.com/seu-usuario"
+                        href="https://github.com/EdbertoSantos"
                         target="_blank"
                         rel="noreferrer"
                         aria-label="GitHub"
@@ -36,7 +38,7 @@ function Contato() {
                     </a>
                     <a
                         className="contato__rede-icone"
-                        href="https://linkedin.com/in/seu-usuario"
+                        href="https://www.linkedin.com/in/edberto-santos-dev/"
                         target="_blank"
                         rel="noreferrer"
                         aria-label="LinkedIn"
@@ -47,8 +49,7 @@ function Contato() {
                     </a>
                 </div>
 
-                <p className="contato__usernames">@seu-usuario · github.com/seu-usuario</p>
-                <p className="contato__copyright">© {anoAtual} José Santos. All rights reserved.</p>
+                <p className="contato__copyright">© {anoAtual} José Edberto Santos de França. All rights reserved.</p>
             </div>
         </section>
     )

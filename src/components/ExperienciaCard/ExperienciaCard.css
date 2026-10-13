@@ -17,7 +17,7 @@
     width: calc(50% - 40px);
     padding: 24px;
     border-radius: 16px;
-    background: #14121f;
+    background: #07060F;
     border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
@@ -46,7 +46,7 @@
     align-items: center;
     gap: 6px;
     font-size: 12px;
-    color: #a29cb3;
+    color: #8b5cf6;
 }
 
 .experiencia-card__modalidade {

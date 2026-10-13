@@ -12,9 +12,18 @@
 .trajetoria__title {
     font-size: clamp(32px, 5vw, 48px);
     font-weight: 700;
-    color: #ffffff;
     text-align: center;
     margin: 0 0 64px;
+
+    background: linear-gradient(270deg,
+            #f5f5f8,
+            #6000fa);
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+    color: transparent;
 }
 
 .trajetoria__title-destaque {
@@ -62,6 +71,8 @@
 
 .trajetoria__bloco-item {
     margin-bottom: 14px;
+    border-left: 3px solid var(--cor-destaque, #8a5cf670);
+    padding-left: 10px;
 }
 
 .trajetoria__bloco-item:last-child {

@@ -35,7 +35,7 @@ function HeaderNav() {
     <header className="header">
 
       <div className="header__logo">
-        JS
+        ES
       </div>
 
       <nav className="header__nav">

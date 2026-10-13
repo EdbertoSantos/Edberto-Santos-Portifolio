@@ -5,6 +5,18 @@ import './Trajetoria.css'
 const experiencias: Experiencia[] = [
     {
         id: 1,
+        periodo: 'SET 2026 — ATUALMENTE',
+        modalidade: 'Híbrido',
+        cargo: 'Pesquisador em Iniciação Científica',
+        empresa: 'Universidade Federal Rural de Pernambuco (UFRPE) LABORATÓRIO DE PESQUISA Performace Evaluation and Data Analysis Lab (PEDAL)',
+        bullets: [
+            'Desenvolvo modelos de visão computacional em Python para detecção automática de ocorrências de segurança pública a partir de imagens capturadas por drones.',
+            'Integro técnicas de inteligência artificial em ambientes de computação de borda (edge computing), no contexto do projeto de IoT e Computação em Nuvem para Monitoramento de Segurança.',
+            'Pesquiso e implemento arquiteturas de deep learning aplicadas ao reconhecimento de padrões em imagens no plano de trabalho "Detecção automática de ocorrências de segurança pública em imagens".',
+        ],
+    },
+    {
+        id: 2,
         periodo: 'MAI 2025 — MAR 2026',
         modalidade: 'Presencial',
         cargo: 'Auxiliar administrativo Jr.',
@@ -16,7 +28,7 @@ const experiencias: Experiencia[] = [
         ],
     },
     {
-        id: 2,
+        id: 3,
         periodo: 'ABR 2023 — OUT 2023',
         modalidade: 'Híbrido',
         cargo: 'Estagiário Customer Care',
@@ -33,37 +45,75 @@ const formacoes = [
     {
         id: 1,
         curso: 'Licenciatura em Computação',
-        instituicao: 'UFRPE — Recife · 2024 — 2029 (em andamento)',
+        instituicao: 'UFRPE — Recife · 2025 — em andamento (previsão de conclusão em 2029)',
     },
     {
         id: 2,
         curso: 'Análise e Desenvolvimento de Sistemas',
-        instituicao: 'UNINASSAU — Recife · 2023',
+        instituicao: 'UNINASSAU — Recife · 2021 — 2023',
     },
 ]
 
 const certificacoes = [
     {
         id: 1,
-        curso: 'Curso tal',
-        instituicao: '00h — Empresa tal · 2024',
+        curso: 'AWS Cloud Practitioner',
+        instituicao: 'Start+ Rede Cidadã · Mar-Jul 2026',
     },
     {
         id: 2,
-        curso: 'Curso tal',
-        instituicao: '00h — Empresa tal · 2024',
+        curso: 'Red Hat Application Development I: Programming in Java EE',
+        instituicao: 'Red Hat · Nov 2025 - Fev 2026',
+    },
+    {
+        id: 3,
+        curso: 'Engenharia de Qualidade de Software [FAST 2025]',
+        instituicao: 'CESAR School · Set-Dez 2025',
+    },
+    {
+        id: 4,
+        curso: 'Trilha de Desenvolvimento Java',
+        instituicao: 'Capgemini · Em andamento',
+    },
+    {
+        id: 5,
+        curso: 'Cibersegurança',
+        instituicao: 'Start+ Rede Cidadã · Set-Dez 2024',
+    },
+    {
+        id: 6,
+        curso: 'Inteligência Artificial',
+        instituicao: 'Start+ Rede Cidadã · Mai-Set 2024',
+    },
+    {
+        id: 7,
+        curso: 'Trailmix Salesforce (Qualifica Recife)',
+        instituicao: 'Salesforce Trailhead · Em andamento',
     },
 ]
 
-const hardSkills = ['React', 'Node.js', 'TypeScript', 'Python', 'PostgreSQL', 'Git', 'VBA']
-
+const hardSkills = [
+    'Java',
+    'Spring Boot',
+    'Python',
+    'FastAPI',
+    'React',
+    'APIs REST',
+    'JWT',
+    'AWS (EC2, Lambda, S3, CloudWatch)',
+    'PostgreSQL',
+    'MySQL',
+    'Docker',
+    'Git',
+    'JUnit',
+    'VBA',
+    'Visão Computacional',
+]
 function Trajetoria() {
     return (
         <section className="trajetoria">
             <div className="trajetoria__content">
-                <h1 className="trajetoria__title">
-                    <span className="trajetoria__title-destaque">Trajetória</span> profissional
-                </h1>
+                <h1 className="trajetoria__title">Trajetória profissional </h1>
 
                 <div className="trajetoria__timeline">
                     <span className="trajetoria__linha" />
@@ -113,10 +163,7 @@ function Trajetoria() {
 
                 <div className="trajetoria__skills">
                     <h4 className="trajetoria__bloco-titulo">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                            <path d="M8 6 2 12l6 6M16 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round" />
-                        </svg>
-                        Hard Skills
+                        {"</>"} Hard Skills
                     </h4>
                     <div className="trajetoria__skills-lista">
                         {hardSkills.map((skill) => (
@@ -127,6 +174,7 @@ function Trajetoria() {
                     </div>
                 </div>
 
+                {/* TODO: Add arquive to download */}
                 <div className="trajetoria__acoes">
                     <a className="trajetoria__botao trajetoria__botao--primario" href="/curriculo.pdf" download>
                         Baixar currículo em Pdf
